@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arcade IndieTech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Police pixel retro -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        background: #000;
+        color: #00ff88;
+        font-family: "Press Start 2P", monospace;
+        overflow-x: hidden;
+      }
+
+      /* Effet terminal CRT */
+      .glow {
+        text-shadow: 0 0 8px #00ff88, 0 0 12px #00aa55;
+      }
+
+      header {
+        padding: 40px 0;
+        text-align: center;
+        color: #00ff88;
+      }
+
+      /* Fond quadrillé subtil */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#003300 1px, transparent 1px),
+          linear-gradient(90deg, #003300 1px, transparent 1px);
+        background-size: 40px 40px;
+        opacity: 0.11;
+        pointer-events: none;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+      }
+
+      nav a {
+        padding: 12px 22px;
+        background: #0a0a0a;
+        border: 2px solid #00ff88;
+        color: #00ff88;
+        text-decoration: none;
+        transition: 0.2s;
+      }
+
+      nav a:hover {
+        background: #00ff88;
+        color: #000;
+        box-shadow: 0 0 12px #00ff88;
+      }
+
+      /* Container for game cards */
+      .games-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 20px;
+      }
+
+      /* Cartes de jeux */
+      .game-card {
+        width: 280px;
+        height: 260px; /* Equal height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid #00cc66;
+        background: #0a0a0a;
+        color: #00ffcc;
+        font-size: 12px;
+        box-shadow: 0 0 10px #00aa55;
+      }
+
+      .game-card h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: #00ff88;
+      }
+
+      .play-btn {
+        margin-top: 10px;
+        padding: 10px 15px;
+        background: #000;
+        color: #00ff88;
+        border: 2px solid #00ff88;
+        cursor: pointer;
+        transition: 0.15s;
+        text-align: center;
+      }
+
+      .play-btn:hover {
+        background: #00ff88;
+        color: #000;
+      }
+
+      footer {
+        margin-top: 40px;
+        padding: 20px;
+        color: #00aa66;
+        text-align: center;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="glow">
+      <h1>ARCADE INDIE TECH</h1>
+      <p>Liberté • Ouverture • Technologie Indépendante</p>
+    </header>
+
+    <nav>
+      <h1
+        style="
+          color: #00ff88;
+          font-family: 'Press Start 2P', monospace;
+          align-items: center;
+        "
+      >
+        Bienvenue
+      </h1>
+    </nav>
+
+    <section class="games-container">
+      <div class="game-card">
+        <h3>Échapper à l’Algorithme</h3>
+        <p>
+          PAC_MAN <br />
+          Déjoue les flux automatisés, évite les pubs prédictives et récupère
+          ton attention.
+        </p>
+        <button class="play-btn">
+          <a
+            href="/pacman-master/index.html"
+            style="text-decoration: none; color: #00ff88"
+          >
+            JOUER
+          </a>
+        </button>
+      </div>
+
+      <div class="game-card">
+        <h3>Héros Open-Source</h3>
+        <p>
+          INVADERS <br />
+          Construis des outils libres ! Fork, patch, commit — deviens un
+          défenseur de la technologie indépendante.
+        </p>
+        <button class="play-btn">
+          <a
+            href="/Invaders/html.html"
+            style="text-decoration: none; color: #00ff88"
+          >
+            JOUER
+          </a>
+        </button>
+      </div>
+
+      <div class="game-card">
+        <h3>Briseur de Surveillance</h3>
+        <p>
+          Tetris <br />
+          Évite les scanners, neutralise les traceurs, et disparais du système
+          de données.
+        </p>
+        <button class="play-btn">
+          <a
+            href="/Tetris/index1.html"
+            style="text-decoration: none; color: #00ff88"
+          >
+            JOUER
+          </a>
+        </button>
+      </div>
+
+      <div class="game-card">
+        <h3>Défenseur Décentralisé</h3>
+        <p>
+          Snake-Challenge <br />
+          Protège le réseau ! Maintiens les serveurs distribués et bloque les
+          attaques de centralisation.
+        </p>
+        <button class="play-btn">
+          <a
+            href="/Snake-Challenge-main/index.html"
+            style="text-decoration: none; color: #00ff88"
+          >
+            JOUER
+          </a>
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <a
+          href="/ap.html"
+          style="text-decoration: none; color: #00ff88; font-size: large"
+          >À propos</a
+        >
+      </div>
+      <br /><br /><br /><br />
+      © 2025 Arcade IndieTech Construit pour la liberté • Sans dépendances Big
+      Tech
+    </footer>
+  </body>
+</html>
